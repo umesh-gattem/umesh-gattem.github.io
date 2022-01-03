@@ -129,8 +129,22 @@
   font-size: 15px;
 }
 
+.project_collapsible {
+background-color: white;
+  color: blue;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 5px;
+}
+
 .collapse_active, .collapsible:hover {
   background-color: #34568B;
+}
+
+.project_collapse_active, .project_collapsible:hover {
+  background-color: white;
 }
 
 .content {
@@ -139,6 +153,20 @@
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: #f1f1f1;
+}
+
+.project_collapsible::before {
+  background-color: white;
+  content:  "➤"; /* Unicode character for "plus" sign (+) */
+  float: left;
+  font-size: 30px;
+}
+
+.project_collapse_active:before {
+  background-color: white;
+  content:  "➤";
+  transform: rotate(90deg);
+  font-size: 30px;
 }
 
 .collapsible::after {
